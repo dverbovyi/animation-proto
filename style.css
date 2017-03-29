@@ -55,10 +55,10 @@ section {
   line-height: .8em;
 }
 
-button.reserve {
+.button {
   border: none;
   width: 140px;
-  background-color: rgba(0, 157, 219, 0.6);
+  background-color: rgba(0, 157, 219, 1);
   height: 30px;
   font-size: .8em;
   color: #fff;
