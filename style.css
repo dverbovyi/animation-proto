@@ -10,11 +10,9 @@ html {
 }
 
 section {
-  background-image: url("./img/background.png");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position-y: -50px;
-  background-color: rgba(135, 206, 250, 0.4);
+  background: #56cdf0 url("./img/bg.png") no-repeat;
+  background-size: 120%;
+  background-position: -55px -80px;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -102,11 +100,11 @@ section {
   position: absolute;
   bottom: 0;
   right: 0;
-  animation: rotating-left 12s linear infinite;
+  animation: rotating-left 10s linear infinite;
 }
 
 .shining img+img {
-  animation: rotating-right 12s linear infinite;
+  animation: rotating-right 10s linear infinite;
 }
 
 .scene {
@@ -120,12 +118,13 @@ section {
 
 .cube {
   position: absolute;
-  width: 200px;
-  height: 110px;
+  width: 250px;
+  height: 140px;
   transform-style: preserve-3d;
-  transform: rotateY(-25deg);
-  bottom: -80px;
+  transform: rotateY(-27deg);
+  bottom: -90px;
   left: 70px;
+  z-index: 1;
 }
 
 .side {
@@ -140,25 +139,24 @@ section {
 }
 
 .back {
-  transform: translate3d(-8px, 3px, -140px);
+  transform: translate3d(0px, -5px, -140px);
   border-top: none;
   border-left: none;
-  width: 209px;
-  height: 106px;
+  width: 245px;
+  height: 124px;
   background: rgb(255, 243, 133);
 }
 
 .top {
-  transform: translate3d(22px, -81px, 0) rotateX(66deg);
-  width: 192px;
+  transform: translate3d(27px, -114px, 0) rotateX(55deg);
+  width: 240px;
   animation: openBox 1.5s;
   background: linear-gradient(196deg, rgb(208, 187, 2) 36%,rgb(216, 194, 5) 51%,rgb(255, 255, 97) 100%);
 }
 
 .right {
-  transform: translate3d(170px, -27px, -1px) rotateX(90deg) rotateZ(0deg) rotateY(90deg);
-  width: 104px;
-  height: 144px;
+  transform: translate3d(143px, -8px, -7px) rotateY(99deg);
+  height: 124px;
   border-top: none;
   border-bottom: none;
   background: rgb(214, 193, 1);
@@ -167,6 +165,17 @@ section {
 .front {
   transform: translate3d(0, 0, 10px);
   background: linear-gradient(52deg, rgb(195, 175, 0) 36%,rgb(204, 183, 2) 51%,rgb(251, 232, 59) 100%);
+}
+
+.cube-shadow {
+  width: 244px;
+  height: 40px;
+  background: transparent;
+  transform: rotateY(-25deg) translate3d(60px, -5px, -55px);
+  position: absolute;
+  bottom: -100px;
+  box-shadow: aquamarine 2px;
+  box-shadow: -12px 17px 26px -2px rgba(0,0,0,0.57);
 }
 
 /*letters bouncing*/
@@ -213,23 +222,20 @@ section {
   }
 
   from {
-    transform: translate3d(50px, -65px, 50px) rotateX(90deg);
+    transform: translate3d(32px, -80px, 0px) rotateZ(1deg) rotateX(85deg);
   }
 
   60% {
-    transform: translate3d(22px, -78px, 0) rotateX(70deg);
+    transform: translate3d(32px, -99px, 0) rotateX(70deg);
+    width: 238px;
   }
 
   75% {
-    transform: translate3d(21px, -83px, 0) rotateX(64deg);
-  }
-
-  90% {
-    /*transform: translate3d(22px, -80px, 0) rotateX(68deg);*/
+    transform: translate3d(25px, -118px, 0) rotateX(50deg);
   }
 
   to {
-    transform: translate3d(22px, -81px, 0) rotateX(66deg);
+    transform: translate3d(27px, -114px, 0) rotateX(55deg);
   }
 }
 
